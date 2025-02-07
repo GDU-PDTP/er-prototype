@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomination Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-select, .form-control {
+            margin-bottom: 15px;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #198754;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .btn-submit:hover {
+            background-color: #146c43;
+        }
+        .logo-section {
+            text-align: center;
+        }
+        .logo-section hr {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        .logo-img {
+            width: 80px;
+            height: auto;
+        }
+        h4.text-center {
+            margin-bottom: 25px;  /* Increased spacing */
+            font-weight: bold;
+        }
+        p.title {
+            text-align: center; /* Center-aligns "Employee Recognition Nomination" */
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Nairobi City County Logo Section -->
+        <div class="logo-section">
+            <hr>
+            <img src="https://netstorage-tuko.akamaized.net/images/3712dc39662d8c89.jpg?imwidth=720" alt="Nairobi City County" class="logo-img">
+            <hr>
+        </div>
+
+        <!-- Centered Nomination Form Heading -->
+        <h4 class="text-center">Nomination Form</h4>
+
+        <p class="title">Employee Recognition Nomination</p>
+
+        <p>
+            This questionnaire is designed to identify and recognize employees who exemplify outstanding qualities and contributions 
+            to Nairobi City County Government. Please evaluate the employee based on the following categories.
+        </p>
+        <p><small>[Mark appropriately where 1 is the least and 5 as the highest]. Your feedback is valuable in selecting the most deserving employee.</small></p>
+
+        <!-- Choose the Sub-Sector -->
+        <label for="subSector">Choose the Sub-Sector:</label>
+        <select class="form-select" id="subSector">
+            <option selected disabled>-- Select Sub-Sector --</option>
+            <option value="health">Health</option>
+            <option value="education">Education</option>
+            <option value="transport">Transport</option>
+        </select>
+
+        <!-- Section 1: Employee Information -->
+        <label for="employeeInfo">Section 1: Employee Information</label>
+        <select class="form-select" id="employeeInfo">
+            <option selected disabled>-- Select Option --</option>
+            <option value="personal">Personal Details</option>
+            <option value="department">Department</option>
+        </select>
+
+        <!-- Section 2: Key Qualities and Performance Evaluation -->
+        <label for="performanceEval">Section 2: Key Qualities and Performance Evaluation</label>
+        <select class="form-select" id="performanceEval">
+            <option selected disabled>-- Select Option --</option>
+            <option value="skills">Skills & Competence</option>
+            <option value="leadership">Leadership</option>
+        </select>
+
+        <!-- Section 3: Overall Evaluation -->
+        <label for="overallEval">Section 3: Overall Evaluation</label>
+        <select class="form-select" id="overallEval">
+            <option selected disabled>-- Select Option --</option>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+        </select>
+
+        <!-- Upload Supporting Documents -->
+        <label for="fileUpload">Upload Supporting Documents:</label>
+        <input type="file" class="form-control" id="fileUpload">
+
+        <!-- Submit Button -->
+        <button class="btn btn-submit mt-3">Submit</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
