@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+.dee{
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    border: 1px solid black;
+}
+.logo-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.history-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#history-txt{
+    margin: 2em;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+/* th {
+    background-color: #f2f2f2;
+} */
+
+
+
