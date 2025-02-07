@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Recognition Nomination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .dropdown {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: relative;
+            width: 100%;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content option {
+            padding: 10px;
+            display: block;
+        }
+        .file-upload {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .dropdown-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.small-dropdown {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Recognition Nomination</h2>
+        <p>This questionnaire is designed to identify and recognize employees who exemplify outstanding qualities and contributions to Nairobi City County Government.</p>
+        <p>[Mark appropriately where 1 is the least and 5 as the highest]</p>
+        
+        <label for="sub-sector">Choose your Sub-sector</label>
+        <select id="sub-sector" class="dropdown">
+            <option value="">Select</option>
+            <option value="sub1">Sub-sector 1</option>
+            <option value="sub2">Sub-sector 2</option>
+        </select>
+        
+        <label for="employee-info">Section 1: Employee Information</label>
+        <select id="employee-info" class="dropdown">
+            <option value="">Select</option>
+            <option value="info1">Info 1</option>
+            <option value="info2">Info 2</option>
+        </select>
+        
+        <label for="performance">Section 2: Key Qualities and Performance Evaluation</label>
+        <select id="performance" class="dropdown">
+            <option value="">Select</option>
+            <option value="quality1">Quality 1</option>
+            <option value="quality2">Quality 2</option>
+        </select>
+        
+        <label for="evaluation">Section 3: Overall Evaluation</label>
+        <select id="evaluation" class="dropdown">
+            <option value="">Select</option>
+            <option value="eval1">Evaluation 1</option>
+            <option value="eval2">Evaluation 2</option>
+        </select>
+        
+        <div class="file-upload">
+            <label for="file">Upload supporting documents:</label>
+            <input type="file" id="file">
+        </div>
+        <div class="dropdown-container">
+            <label for="sub-sector">Choose your Sub-sector:</label>
+            <select id="sub-sector" class="small-dropdown">
+                <option value="">Select</option>
+                <option value="sub1">Sub-sector 1</option>
+                <option value="sub2">Sub-sector 2</option>
+            </select>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </div>
+</body>
+</html>
