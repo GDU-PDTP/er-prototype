@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #6da544;
+    background-color: white;
+    position: relative;
+    width: 100%;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    display: block; /* Ensure it's visible */
+    transition: 0.3s;
+    z-index: 1001;
+}
+
+.logo {
+    height: 60px;
+    max-width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #024a19;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    transition: 0.3s;
+    padding-top: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0; /* Show when active */
+}
+
+.sidebar .close-icon {
+    font-size: 20px;
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li span {
+    margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: #035a24;
+}
+
+.sidebar .dropdown {
+    padding-left: 40px;
+}
+
+.logout {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    color: yellow;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 1002;  /* Ensures it's above other elements */
+    background-color: rgba(0, 0, 0, 0.5);  /* Optional, adds a background to the logout button */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.logout:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+/* Records Section */
+.records-container {
+    width: 90%; /* Adjust the width to leave space on the sides */
+    max-width: 1200px; /* Optional: Set a max width to prevent it from becoming too wide */
+    margin: 20px auto; /* Center it horizontally */
+    padding: 20px;
+    overflow-x: auto; /* Ensures table scrolls on small screens */
+    transition: margin-left 0.3s ease; /* Smooth transition when sidebar opens/closes */
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow-x: auto;
+    display: block;
+}
+
+.records-table th,
+.records-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.records-table th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+.records-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* When Sidebar is active */
+.sidebar.active ~ .records-container {
+    margin-left: 250px; /* Shift the records container to the right when the sidebar is open */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+        padding: 10px;
+        position: relative;
+    }
+
+    .menu-icon {
+        font-size: 28px;
+        display: block !important; /* Ensure visibility */
+        position: absolute;
+        left: 15px; /* Adjust left position */
+        z-index: 1001;
+    }
+
+    .logo {
+        height: 50px;
+        margin-left: 40px; /* Shift logo slightly to the right */
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh; /* Full height */
+        background-color: #0b3d02; /* Dark green */
+        color: white;
+        position: fixed;
+        left: -250px;
+        top: 0;
+        transition: left 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Pushes logout to the bottom */
+        padding: 20px;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        padding: 15px 10px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sidebar ul li:hover {
+        background-color: #1a5e20;
+        cursor: pointer;
+    }
+
+    .sidebar .close-icon {
+        font-size: 22px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        cursor: pointer;
+    }
+
+    .logout {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        color: yellow;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .logout:hover {
+        color: white;
+    }
+
+    .records-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .records-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

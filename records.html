@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="close-icon" onclick="toggleSidebar()"></div>
+        <ul>
+            <li href='manageusers'><span>👥</span> Manage Users</li>
+            <li href='records'><span>📂</span> View Records</li>
+            <li href='question'><span>❓</span> Question Database</li>
+            <li class="dropdown">
+                <span>Select Department ▼</span>
+            </li>
+        </ul>
+        <div class="logout" href="logout">
+            <span>🔓</span> <span>LOGOUT</span>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="menu-icon" id="menuIcon" onclick="toggleSidebar()">☰</div>
+        <img src="logo 1.png" alt="Nairobi City County" class="logo">
+    </header>
+
+    <!-- Records Section -->
+    <div class="records-container">
+        <h2 class="title">Records</h2>
+        <table class="records-table">
+            <thead>
+                <tr>
+                    <th>EMPLOYEE ID</th>
+                    <th>NAME</th>
+                    <th>SUBMISSION DATE</th>
+                    <th>STAGE</th>
+                    <th>ACTION</th>
+                    <th>NO. OF NOMINATIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12345</td>
+                    <td>JOHN DOE</td>
+                    <td>02/02/2025</td>
+                    <td>APPLICATION STAGE</td>
+                    <td>UNDER REVIEW</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const menuIcon = document.getElementById('menuIcon');
+
+    sidebar.classList.toggle('active');
+
+    // Toggle menu icon between ☰ and ✖
+    if (sidebar.classList.contains('active')) {
+        menuIcon.innerHTML = '✖';
+    } else {
+        menuIcon.innerHTML = '☰';
+    }
+}
+    </script>
+
+</body>
+</html>

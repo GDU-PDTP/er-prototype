@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #2f4f2f;
+}
+
+header img {
+  height: 60px;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 22px;
+  color: #2f4f2f;
+  margin-bottom: 30px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-container > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 30%;
+}
+
+.profile-container img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2f4f2f;
+  margin-bottom: 10px;
+}
+
+.profile-container p {
+  font-size: 16px;
+  color: #2f4f2f;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-basis: 60%;
+}
+
+button {
+  background-color: #2f4f2f;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #1e331e;
+}
+
+button img {
+  height: 24px;
+  width: 24px;
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.table th, .table td {
+  border: 1px solid #2f4f2f;
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.table th {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons button {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.delete {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.edit {
+  background-color: #27ae60;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .actions {
+      width: 100%;
+      max-width: 400px;
+  }
+
+  button {
+      font-size: 16px;
+      padding: 12px;
+  }
+
+  .table th, .table td {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  .action-buttons button {
+      font-size: 12px;
+      padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 18px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  button img {
+      height: 20px;
+      width: 20px;
+  }
+
+  .table th, .table td {
+      font-size: 12px;
+      padding: 6px;
+  }
+
+  .action-buttons button {
+      font-size: 10px;
+      padding: 4px 8px;
+  }
+}
