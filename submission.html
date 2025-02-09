@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Success</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #fff;
+        }
+        .header {
+            width: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px 20px;
+            border-bottom: 2px solid #004d1a;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: #004d1a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            transition: 0.3s;
+            z-index: 1001;
+        }
+        .sidebar.show {
+            left: 0;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sidebar a:hover {
+            background: #006622;
+        }
+        .close-btn {
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            text-align: right;
+            color: white;
+            align-self: flex-end;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .content {
+            text-align: center;
+            padding: 160px 20px 20px;
+        }
+        .content h2 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .content p {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+        .highlight {
+            color: green;
+            font-weight: bold;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+        }
+        .overlay.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <div class="logo">
+            <img src="https://gdu-staging.venturepal.africa/assets/img/brand/logog-1.png" alt="Nairobi City County" class="logo-img">
+        </div>
+        <div class="divider"></div>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-chart-line"></i> Progress</a>
+        <a href="#"><i class="fas fa-history"></i> History</a>
+        <a href="#"><i class="fas fa-user"></i> Profile</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+    <div class="content">
+        <h2>Congratulations! Your nomination has been successfully submitted.</h2>
+        <p>Kindly visit the <span class="highlight">“Progress”</span> tab to view nomination progress.</p>
+    </div>
+    <script>
+        function toggleMenu() {
+            let sidebar = document.getElementById('sidebar');
+            let overlay = document.getElementById('overlay');
+            let isOpen = sidebar.classList.contains('show');
+            if (isOpen) {
+                sidebar.classList.remove('show');
+                overlay.classList.remove('show');
+            } else {
+                sidebar.classList.add('show');
+                overlay.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
